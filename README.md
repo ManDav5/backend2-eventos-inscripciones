@@ -18,15 +18,23 @@ El proyecto sigue una arquitectura en capas con separación de responsabilidades
 │   │   ├── events.controller.js
 │   │   └── sessions.controller.js
 │   ├── dao/                # Data Access Objects (acceso directo a la base de datos)
+│   │   ├── events.dao.js
+│   │   └── users.dao.js
 │   ├── middlewares/        # Middlewares de aplicación y validación
+│   │   ├── errorHandler.middleware.js
 │   ├── models/             # Esquemas y modelos de Mongoose
 │   │   ├── event.model.js
 │   │   └── user.model.js
 │   ├── repositories/       # Capa de repositorios
+│   │   ├── events.repository.js
+│   │   └── sessions.repository.js
 │   ├── routes/             # Definición de rutas y routers modulares
 │   │   ├── events.router.js
 │   │   └── sessions.router.js
 │   ├── services/           # Lógica de negocio
+│   │   ├── events.service.js
+│   │   └── sessions.service.js
+│   ├── utils/           # Próximamente
 │   ├── app.js              # Configuración y middlewares de Express
 │   └── server.js           # Punto de entrada, conexión a BD y arranque del servidor
 ├── .env.example            # Plantilla de variables de entorno requeridas

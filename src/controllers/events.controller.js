@@ -1,3 +1,14 @@
-export const getEvents = async (req,res) => {
-    return res.status(200).json({status: "success", payload: []});
+import EventsService from "../services/events.service.js";
+
+export async function createEvent(req,res,next) {
+    try{
+        const newEvent = await EventsService.create(req.body);
+        res.status(201).json({
+            status: 'success',
+            message: 'Usuario creado',
+            payload: 'newEvent'
+        });
+    } catch(error){
+        next(error);
+    }
 };
