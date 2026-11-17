@@ -45,7 +45,7 @@ npm install
 2. Crear un archivo `.env` en la raíz tomando como base `.env.example`:
 ```env
 PORT=8080
-MONGO_URL=mongodb+srv://<usuario>:<password>@<cluster>.mongodb.net/<database>?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://<usuario>:<password>@<cluster>.mongodb.net/<database>?retryWrites=true&w=majority
 ```
 
 ## 🚀 Ejecución
