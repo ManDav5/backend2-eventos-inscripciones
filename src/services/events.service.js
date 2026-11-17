@@ -1,4 +1,4 @@
-import EventsRepository from "../repositories/sessions.repository.js";
+import EventsRepository from "../repositories/events.repository.js";
 
 class EventsService{
     
@@ -6,7 +6,7 @@ class EventsService{
         this.repository=repository;
     }
 
-    async createEvent(eventData){
+    async create(eventData){
         return await this.repository.create(eventData);
     };
 

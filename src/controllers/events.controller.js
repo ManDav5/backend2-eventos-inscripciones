@@ -5,8 +5,8 @@ export async function createEvent(req,res,next) {
         const newEvent = await EventsService.create(req.body);
         res.status(201).json({
             status: 'success',
-            message: 'Usuario creado',
-            payload: 'newEvent'
+            message: 'Evento creado',
+            payload: newEvent
         });
     } catch(error){
         next(error);
