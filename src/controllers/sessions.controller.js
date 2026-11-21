@@ -6,7 +6,12 @@ export async function register(req,res,next) {
         res.status(201).json({
             status: 'success',
             message: 'Usuario creado',
-            payload: newUser
+            payload: {
+                first_name: newUser.first_name,
+                last_name: newUser.last_name,
+                email: newUser.email,
+                role: newUser.role
+            }
         });
     } catch(error){
         next(error);
@@ -19,7 +24,12 @@ export async function login(req,res,next) {
         res.status(200).json({
             status: 'success',
             message: 'Bienvenido',
-            payload: user
+            payload: {
+                first_name: user.first_name,
+                last_name: user.last_name,
+                email: user.email,
+                role: user.role
+            }
         });
     } catch(error){
         next (error);

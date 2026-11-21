@@ -9,7 +9,7 @@ const eventSchema = new mongoose.Schema(
         capacity: { type: Number, required: true }
     },
     {
-        timeStamps: true
+        timestamps: true
     }
 );
 
